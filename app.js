@@ -24,17 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 // 1) GLOBAL MIDDLEWARES
 // CORS - PUT THIS AT THE VERY TOP
 app.use(cors({
-  origin: [
-    'http://localhost:3000', 
-    'http://127.0.0.1:3000',
-    'http://localhost:5173',     // Vite default port
-    'http://127.0.0.1:5173',     // Vite default port
-    'http://localhost:5174',     // Alternative Vite port
-    'http://127.0.0.1:5174',
-    'https://natours-1-zy39.onrender.com',
-    'https://front-natours-cdek.vercel.app' 
-         // Alternative Vite port
-  ],
+  origin: true,  // ✅ Allow all origins temporarily
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
