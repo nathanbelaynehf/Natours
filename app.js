@@ -17,18 +17,22 @@ const bookingRouter = require('./routes/bookingRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
+app.use(cors({
+  origin: true,  // Use this for now
+  credentials: true
+}));
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // 1) GLOBAL MIDDLEWARES
 // CORS - PUT THIS AT THE VERY TOP
-app.use(cors({
-  origin: true,  // ✅ Allow all origins temporarily
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
-}));
+// app.use(cors({
+//   origin: true,  // ✅ Allow all origins temporarily
+//   credentials: true,
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+//   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+// }));
 
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
