@@ -30,7 +30,10 @@ app.use(cors({
     'http://localhost:5173',     // Vite default port
     'http://127.0.0.1:5173',     // Vite default port
     'http://localhost:5174',     // Alternative Vite port
-    'http://127.0.0.1:5174'      // Alternative Vite port
+    'http://127.0.0.1:5174',
+    'https://natours-1-zy39.onrender.com/',
+    'https://front-natours-cdek.vercel.app/' 
+         // Alternative Vite port
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],

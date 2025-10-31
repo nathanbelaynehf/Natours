@@ -38,7 +38,7 @@ const Signup = () => {
     try {
       console.log('Attempting signup with:', { name, email });
       
-      const response = await fetch('http://127.0.0.1:3000/api/v1/users/signup', {
+      const response = await fetch('https://natours-1-zy39.onrender.com/api/v1/users/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

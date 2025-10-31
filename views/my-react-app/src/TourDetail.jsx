@@ -32,7 +32,7 @@ const TourDetail = () => {
     const fetchTour = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:3000/api/v1/tours/${id}`);
+        const response = await fetch(`https://natours-1-zy39.onrender.com/api/v1/tours/${id}`);
        
         if (!response.ok) {
           throw new Error('Tour not found');

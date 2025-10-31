@@ -8,7 +8,7 @@ function TourCards() {
   useEffect(() => {
     const fetchTours = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/v1/tours');
+        const res = await fetch('https://natours-1-zy39.onrender.com/api/v1/tours');
         const data = await res.json();
         console.log(data.data.data);
         setTours(data.data.data);

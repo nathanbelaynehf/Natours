@@ -63,7 +63,7 @@ const UserAccount = () => {
         
         if (token) {
           try {
-            const response = await fetch('http://127.0.0.1:3000/api/v1/users/me', {
+            const response = await fetch('https://natours-1-zy39.onrender.com/api/v1/users/me', {
               headers: {
                 'Authorization': `Bearer ${token}`
               }
@@ -134,7 +134,7 @@ const UserAccount = () => {
     
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://127.0.0.1:3000/api/v1/users/updateMe', {
+      const response = await fetch('https://natours-1-zy39.onrender.com/api/v1/users/updateMe', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ const UserAccount = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://127.0.0.1:3000/api/v1/users/updateMyPassword', {
+      const response = await fetch('https://natours-1-zy39.onrender.com/api/v1/users/updateMyPassword', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
